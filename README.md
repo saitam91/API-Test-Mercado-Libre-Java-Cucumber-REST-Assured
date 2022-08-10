@@ -5,7 +5,7 @@
 * This automated test framework was created based on BDD carrying out the best testing practices.
 * To achieve this test framework, test cases with Mercado Libre API following this steps were created:
 
-  **1. Carry out a search in MercadoLibre for 3 different items.**
+  **1. Carry out a search in Mercado Libre for 3 different items.**
 
   **2. Validate that the search results contain the word used as search criteria.**
  
