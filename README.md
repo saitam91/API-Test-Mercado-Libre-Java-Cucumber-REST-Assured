@@ -46,7 +46,7 @@
 
    - gradle clean
    
-   - gradle test -P cucumber.options="--tags '@TestMELI'"
+   - gradle test -D cucumber.options="--tags '@TestMELI'"
 
 
 
