@@ -8,8 +8,10 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.junit.Assert;
+
 import static io.restassured.RestAssured.given;
-import static org.junit.Assert.assertTrue;
+
 
 
 public class APIStepsMercadoLibre {
@@ -36,8 +38,10 @@ public class APIStepsMercadoLibre {
 
                     for (int i = 0; i < resultSearch.length; i++) {
                         for (int j =0; j< searchCriteria.length; j++){
-                                assertTrue("The result search "+resultSearch[i]+" not match with the search criteria: "+searchCriteria[j],resultSearch[i].contains(searchCriteria[j]));
-                                log.info("The result search "+resultSearch[i]+" matches with the search criteria: "+searchCriteria[j]);
+                            Boolean upperCaseResultSearch = resultSearch[i].contains(searchCriteria[j].substring(0, 1).toUpperCase() + searchCriteria[j].substring(1));
+                            Boolean lowerCaseResultSearch = resultSearch[i].contains(searchCriteria[j].substring(0, 1).toLowerCase() + searchCriteria[j].substring(1));
+                            Assert.assertTrue("The result search "+resultSearch[i]+" not match with the search criteria: "+searchCriteria[j],(upperCaseResultSearch || lowerCaseResultSearch));
+                            log.info("The result search "+resultSearch[i]+" matches with the search criteria: "+searchCriteria[j]);
                         }
                     }
     }
