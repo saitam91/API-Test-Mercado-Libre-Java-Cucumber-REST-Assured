@@ -1,5 +1,5 @@
 
-# Test Mercado Libre Java-Cucumber-REST-Assured
+# Test Mercado Libre / Java-Cucumber-REST-Assured
 
 ## Resume:
 * This automated test framework was created based on BDD carrying out the best testing practices.
