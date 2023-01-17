@@ -15,7 +15,11 @@ repositories {
 dependencies {
 
 
-    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '4.3.3'
+
+    // https://mvnrepository.com/artifact/io.rest-assured/rest-assured
+    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '5.3.0'
+
+
     implementation group: 'io.cucumber', name: 'cucumber-java', version: '6.10.3'
     testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '6.10.3'
     testImplementation group: 'io.rest-assured', name: 'json-schema-validator', version: '3.0.3'
